@@ -52,7 +52,7 @@
     <license.organizationName>${project.artifactId}</license.organizationName>
     <license.inceptionYear>2021</license.inceptionYear>
 
-    <exec.mainClass>com.dhsrocha.app.App</exec.mainClass>
+    <exec.mainClass>com.dhsrocha.app.App$Entry</exec.mainClass>
 
     <path.main.resources>
       ${project.basedir}/src/main/resources
@@ -210,7 +210,18 @@
         <version>4.1.0</version>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>org.testfx</groupId>
+        <artifactId>testfx-junit5</artifactId>
+        <version>4.0.16-alpha</version>
+        <scope>test</scope>
+      </dependency>
       <!-- Application -->
+      <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-swing</artifactId>
+        <version>18-ea+7</version>
+      </dependency>
       <!-- Database -->
       <dependency>
         <groupId>com.h2database</groupId>
@@ -242,7 +253,16 @@
       <artifactId>mockito-junit-jupiter</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.testfx</groupId>
+      <artifactId>testfx-junit5</artifactId>
+      <scope>test</scope>
+    </dependency>
     <!-- Application -->
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-swing</artifactId>
+    </dependency>
     <!-- Database -->
     <dependency>
       <groupId>com.h2database</groupId>
