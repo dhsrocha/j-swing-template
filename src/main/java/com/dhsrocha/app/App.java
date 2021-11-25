@@ -1,5 +1,6 @@
 package com.dhsrocha.app;
 
+import com.dhsrocha.app.ui.aircraft.AircraftLayout;
 import javafx.application.Application;
 import javafx.embed.swing.SwingNode;
 import javafx.scene.Scene;
@@ -25,19 +26,17 @@ public final class App extends Application {
 
   @Override
   public void start(final Stage stage) {
-    stage.setTitle("Swing in JavaFX Sample.");
+    stage.setTitle("AirTop soft test");
     stage.setScene(scene());
     stage.show();
   }
 
-  // TODO Make it as an injectable component.
-  static final String TESTABLE_BUTTON = "testBtn";
   private static Scene scene() {
-    val btn = new JButton("Click me!");
-    btn.putClientProperty("id", TESTABLE_BUTTON);
-
+    val layout = AircraftLayout.create();
     val swing = new SwingNode();
-    SwingUtilities.invokeLater(() -> swing.setContent(btn));
-    return new Scene(new StackPane(swing), 250, 150);
+    SwingUtilities.invokeLater(() -> swing.setContent(layout));
+    return new Scene(new StackPane(swing),
+                     layout.getWidth(),
+                     layout.getHeight());
   }
 }
